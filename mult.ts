@@ -1,16 +1,22 @@
 type Operation = 'multiply' | 'add' | 'divide';
-type Result = string | number;
 
-const calc = (a: number, b: number, op: Operation): Result => {
-  if (op === 'multiply') {
-    return a * b;
-  } else if (op === 'add') {
-    return a + b;
-  } else if (op === 'divide') {
-    if (b === 0) return 'can\'t divide by 0';
-    return a / b;
+const calc = (a: number, b: number, op: Operation): number => {
+  switch (op) {
+    case 'multiply':
+      return a * b;
+    case 'divide':
+      if (b === 0) throw new Error('Cant divide by zero haha');
+      return a / b;
+    case 'add':
+      return a + b;
+    default:
+      throw new Error('Operation is not of acceptable type');
   }
-  return 'hehe'
 }
 
-console.log(calc(2, 10, 'add'))
+try {
+  console.log(calc(2, 10, 'add'));
+  console.log(calc(2, 0, 'divide'));
+} catch (e: any) {
+  console.log(`Uh oh...`, e.message);
+}
