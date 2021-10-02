@@ -20,3 +20,5 @@ try {
 } catch (e: any) {
   console.log(`Uh oh...`, e.message);
 }
+
+console.log(process.argv)
