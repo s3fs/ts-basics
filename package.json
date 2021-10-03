@@ -6,8 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts-node": "ts-node",
-    "mul": "ts-node mul.ts",
-    "calc": "ts-node calc.ts"
+    "bmi": "ts-node index.ts"
   },
   "author": "me",
   "license": "ISC",
