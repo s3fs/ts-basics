@@ -7,7 +7,8 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "ts-node": "ts-node",
     "mul": "ts-node mul.ts",
-    "calc": "ts-node calc.ts"
+    "calc": "ts-node calc.ts",
+    "start": "ts-node index.ts"
   },
   "author": "me",
   "license": "ISC",
@@ -16,5 +17,8 @@
     "ts-node": "^10.2.1",
     "tslib": "^2.3.1",
     "typescript": "^4.4.3"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
   }
 }
